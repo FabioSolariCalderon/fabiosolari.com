@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabio Solari | Portfolio</title>
+    <title>Fabio Solari | Business Management Portfolio</title>
     <style>
         :root {
             --primary-color: #3a86ff;
-            --secondary-color: #1a4c8e; /* Changed from #ff006e (magenta) to dark blue */
+            --secondary-color: #1a4c8e;
             --background-color: #ffffff;
             --text-color: #333333;
             --light-gray: #f8f9fa;
@@ -45,8 +45,7 @@
             height: 100vh;
             transition: transform var(--transition-speed);
             z-index: 1000;
-            /* Added right border to separate nav from main content */
-            border-right: 3px solid #add8e6; 
+            border-right: 3px solid #add8e6;
         }
 
         .nav-header {
@@ -439,6 +438,88 @@
             transform: translateY(-3px);
         }
 
+        /* Education Section */
+        .education-container {
+            max-width: 800px;
+        }
+        
+        .education-item {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            transition: all var(--transition-speed);
+        }
+        
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .education-date {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-degree {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .education-school {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-location {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Certifications Section */
+        .certifications-container {
+            max-width: 800px;
+        }
+        
+        .certification-item {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            transition: all var(--transition-speed);
+        }
+        
+        .certification-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .certification-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .certification-issuer {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .certification-location {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .certification-date {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
         /* Mobile Menu */
         .menu-toggle {
             display: none;
@@ -540,47 +621,46 @@
             <div class="nav-header">
                 <img src="/api/placeholder/400/400" alt="Profile" class="profile-img">
                 <h1 class="nav-name">Fabio Solari</h1>
-                <p class="nav-title">Master's Student<br>Universitá di Bologna</p>
+                <p class="nav-title">Business Management Professional</p>
             </div>
 
             <ul class="nav-links">
                 <li class="nav-link"><a href="#home">Home</a></li>
                 <li class="nav-link"><a href="#about">About</a></li>
-                <li class="nav-link"><a href="#projects">Projects</a></li>
-                <li class="nav-link"><a href="#skills">Skills</a></li>
                 <li class="nav-link"><a href="#experience">Experience</a></li>
+                <li class="nav-link"><a href="#education">Education</a></li>
+                <li class="nav-link"><a href="#certifications">Certifications</a></li>
+                <li class="nav-link"><a href="#skills">Skills</a></li>
                 <li class="nav-link"><a href="#contact">Contact</a></li>
             </ul>
 
-            <!-- Added Language Switcher -->
+            <!-- Language Switcher -->
             <div class="language-switcher">
                 <label for="language" class="language-label">Language</label>
                 <select id="language" class="language-select">
                     <option value="en">English</option>
                     <option value="es">Español</option>
-                    <option value="fr">Français</option>
-                    <option value="de">Deutsch</option>
-                    <option value="zh">中文</option>
-                    <option value="ja">日本語</option>
+                    <option value="it">Italiano</option>
                 </select>
             </div>
 
             <div class="social-links">
-                <a href="#" class="social-link">
+                <a href="https://www.linkedin.com/in/fabiosolari/" class="social-link" target="_blank">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
                     </svg>
                 </a>
-                <a href="#" class="social-link">
+                <a href="mailto:fsolaric@fen.uchile.cl" class="social-link">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
                 </a>
-                <a href="#" class="social-link">
+                <a href="tel:+56998840484" class="social-link">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
                 </a>
             </div>
@@ -588,60 +668,100 @@
 
         <main class="main-content">
             <section id="home" class="section hero">
-                <h1>Hello, I'm <span style="color: var(--primary-color);">John Doe</span></h1>
-                <p>I'm a passionate web developer and designer with a focus on creating beautiful, functional, and user-friendly websites. Let's build something amazing together.</p>
+                <h1>Hello, I'm <span style="color: var(--primary-color);">Fabio Solari</span></h1>
+                <p>Business Management Professional with international experience in retail, entertainment, and product development. Focused on global markets with strong analytical skills and multilingual capabilities.</p>
                 <a href="#contact" class="cta-btn">Get In Touch</a>
             </section>
 
             <section id="about" class="section">
                 <h2 class="section-title">About Me</h2>
-                <p>With over 5 years of experience in web development, I specialize in creating responsive, performant websites and applications. I'm passionate about clean code, intuitive UX/UI design, and staying up-to-date with the latest technologies.</p>
-                <p>When I'm not coding, you can find me hiking in the mountains, reading sci-fi novels, or experimenting with new recipes in the kitchen.</p>
+                <p>I am a Business Management professional with an international perspective, currently pursuing a Master's in Business Management with a focus on Global and Emerging Markets at the University of Bologna, Italy.</p>
+                <p>With experience across retail analysis, database management, and product development, I combine analytical skills with a global mindset. My multilingual abilities (English C2, Spanish native, Italian intermediate) and international education in the UK and China have equipped me with a unique perspective on global business challenges.</p>
+                <p>I'm particularly interested in international trade, analytics, and emerging market opportunities, with specialized knowledge of doing business in China and equipment manufacturing cooperation.</p>
             </section>
 
-            <section id="projects" class="section">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="/api/placeholder/600/400" alt="Project" class="project-img">
-                        <div class="project-content">
-                            <h3 class="project-title">E-Commerce Platform</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">React</span>
-                                <span class="project-tag">Node.js</span>
-                                <span class="project-tag">MongoDB</span>
-                            </div>
-                            <p class="project-description">A full-stack e-commerce platform with user authentication, product management, and payment processing.</p>
-                            <a href="#" class="project-link">View Project →</a>
-                        </div>
+            <section id="experience" class="section">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <h3 class="timeline-title">International Marketplace Analyst</h3>
+                        <p class="timeline-company">Falabella - Leading retail and e-commerce company in South America</p>
+                        <p>Assisted Product Managers with reporting, CRM software automatization and 3rd party seller management.</p>
                     </div>
 
-                    <div class="project-card">
-                        <img src="/api/placeholder/600/400" alt="Project" class="project-img">
-                        <div class="project-content">
-                            <h3 class="project-title">Portfolio Website</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">HTML/CSS</span>
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">GSAP</span>
-                            </div>
-                            <p class="project-description">A creative portfolio website with smooth animations and interactive elements using GSAP.</p>
-                            <a href="#" class="project-link">View Project →</a>
-                        </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020 - 2023</div>
+                        <h3 class="timeline-title">I+D Product Manager</h3>
+                        <p class="timeline-company">Neo Bags Design - Textile and Fashion Startup</p>
+                        <p>Designed both minimum viable product and minimum marketable product for a sustainable handbag R&D, financed by private and public R&D grants.</p>
                     </div>
 
-                    <div class="project-card">
-                        <img src="/api/placeholder/600/400" alt="Project" class="project-img">
-                        <div class="project-content">
-                            <h3 class="project-title">Weather Dashboard</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">Vue.js</span>
-                                <span class="project-tag">API</span>
-                                <span class="project-tag">Chart.js</span>
-                            </div>
-                            <p class="project-description">A weather dashboard that provides real-time weather data and forecasts using a third-party API.</p>
-                            <a href="#" class="project-link">View Project →</a>
-                        </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <h3 class="timeline-title">Database Analyst</h3>
+                        <p class="timeline-company">LOTUS - Top entertainment producer in Chile</p>
+                        <p>Database reporting and credential linking for over 40 thousand associates involved in the Lollapalooza Chile 2022 festival. Booking & Guest List management for over 20 international agents.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018</div>
+                        <h3 class="timeline-title">English-Spanish Interpreter</h3>
+                        <p class="timeline-company">Iquique Portuary Company</p>
+                        <p>Provided interpretation services at the port of Iquique, Chile, facilitating international business communications.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-container">
+                    <div class="education-item">
+                        <div class="education-date">In Process</div>
+                        <h3 class="education-degree">Master in Business Management - Global and Emerging Markets</h3>
+                        <p class="education-school">University of Bologna</p>
+                        <p class="education-location">Bologna, Italy</p>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-date">2023</div>
+                        <h3 class="education-degree">Business Engineering, BSc in Business Management</h3>
+                        <p class="education-school">University of Chile</p>
+                        <p class="education-location">Santiago, Chile</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certifications" class="section">
+                <h2 class="section-title">Certifications & International Experience</h2>
+                <div class="certifications-container">
+                    <div class="certification-item">
+                        <div class="certification-date">2024</div>
+                        <h3 class="certification-title">International Production Capacity and Equipment Manufacturing Cooperation Course</h3>
+                        <p class="certification-issuer">Academy of International Business Officials, China's Ministry of Commerce</p>
+                        <p class="certification-location">Beijing, China</p>
+                        <p>Three week course in China's capital, visiting manufacturing enterprises of different industries and understanding international trade.</p>
+                    </div>
+                    
+                    <div class="certification-item">
+                        <div class="certification-date">2023</div>
+                        <h3 class="certification-title">Overseas International Exchange, Visión Global Scholarship</h3>
+                        <p class="certification-issuer">University of Warwick</p>
+                        <p class="certification-location">Coventry, United Kingdom</p>
+                    </div>
+                    
+                    <div class="certification-item">
+                        <div class="certification-date">2023</div>
+                        <h3 class="certification-title">SQL For Data Science</h3>
+                        <p class="certification-issuer">University of California, Davis Faculty</p>
+                        <p class="certification-location">Remote</p>
+                    </div>
+                    
+                    <div class="certification-item">
+                        <div class="certification-date">2021</div>
+                        <h3 class="certification-title">Doing Business in China International Course</h3>
+                        <p class="certification-issuer">Fudan University</p>
+                        <p class="certification-location">Shanghai, China</p>
                     </div>
                 </div>
             </section>
@@ -649,46 +769,18 @@
             <section id="skills" class="section">
                 <h2 class="section-title">Skills</h2>
                 <div class="skills-container">
-                    <div class="skill">HTML5</div>
-                    <div class="skill">CSS3</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">React</div>
-                    <div class="skill">Vue.js</div>
-                    <div class="skill">Node.js</div>
-                    <div class="skill">Express</div>
-                    <div class="skill">MongoDB</div>
-                    <div class="skill">SQL</div>
-                    <div class="skill">Git</div>
-                    <div class="skill">Responsive Design</div>
-                    <div class="skill">UI/UX Design</div>
-                    <div class="skill">Figma</div>
-                    <div class="skill">Adobe XD</div>
-                </div>
-            </section>
-
-            <section id="experience" class="section">
-                <h2 class="section-title">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2021 - Present</div>
-                        <h3 class="timeline-title">Senior Frontend Developer</h3>
-                        <p class="timeline-company">Tech Innovations Inc.</p>
-                        <p>Led the frontend development team in building responsive web applications. Implemented best practices for code quality and performance optimization.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">2019 - 2021</div>
-                        <h3 class="timeline-title">Web Developer</h3>
-                        <p class="timeline-company">Digital Solutions Agency</p>
-                        <p>Developed and maintained websites for various clients. Collaborated with designers to implement responsive and interactive interfaces.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">2017 - 2019</div>
-                        <h3 class="timeline-title">Junior Developer</h3>
-                        <p class="timeline-company">WebCraft Studios</p>
-                        <p>Assisted in the development of websites and web applications. Gained experience in HTML, CSS, JavaScript, and various frameworks.</p>
-                    </div>
+                    <div class="skill">Excel (Advanced)</div>
+                    <div class="skill">Power BI (Advanced)</div>
+                    <div class="skill">Office (Advanced)</div>
+                    <div class="skill">SQL (Intermediate)</div>
+                    <div class="skill">R (Intermediate)</div>
+                    <div class="skill">English (IELTS C2)</div>
+                    <div class="skill">Spanish (Native)</div>
+                    <div class="skill">Italian (Intermediate)</div>
+                    <div class="skill">Data Analysis</div>
+                    <div class="skill">International Business</div>
+                    <div class="skill">Market Research</div>
+                    <div class="skill">Product Management</div>
                 </div>
             </section>
 
