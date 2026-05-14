@@ -837,7 +837,9 @@
     }
   };
 
-  let currentLang = 'en';
+  const browserLang = navigator.language?.slice(0, 2).toLowerCase();
+  const currentLangInit = ['es', 'it'].includes(browserLang) ? browserLang : 'en';
+  let currentLang = currentLangInit;
 
   function applyLang(lang) {
     currentLang = lang;
@@ -902,6 +904,7 @@
   const AGORDO = [46.2757, 12.0263];
   const map = L.map('map', { zoomControl: true, scrollWheelZoom: false }).setView(AGORDO, 13);
   window._map = map;
+    applyLang(currentLangInit);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 18
